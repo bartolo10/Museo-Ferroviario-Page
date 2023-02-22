@@ -1,0 +1,800 @@
+/* Estilos CSS */
+
+/* CSS Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul, li{
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+/* Variables ========================== */
+
+:root{
+    --var-blanco: #fff;  
+    --var-primary: #54939E;
+    --var-primary-hover: #80BFC4;
+    --var-secondary: #E9ECC7;
+    --var-secondary-hover: #A4A965;
+    --var-secondary-txt-hover: #687126;
+    --var-dorado: #EBC06F;
+    --var-txt-dorado: #DBA135;
+    --var-gris-claro: #F3F7F8;
+    --var-fondo-claro: #F1F3D6;
+    --var-gris-oscuro: #707070;
+    --var-texto: #77796C;
+} 
+
+/* Fuentes ========================= */
+
+h2, h4, .span-fechas-crono, .span-h2-titulo{
+    font-family: 'Spectral', serif;
+}
+
+a, span, p, h3, h5, h6, label, *::placeholder {
+
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+    color: var(--var-blanco);
+}
+
+.span-h2-titulo {
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--var-blanco);
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #545454;
+    position: relative;
+    padding: 0 40px;
+    z-index: 1;
+    margin: 0 auto 24px;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+}
+
+/* h3 para fondos blancos */
+
+.h3-span {
+    background-color: var(--var-blanco);
+    position: relative;
+    padding: 0 12px;
+}
+
+/* h3 para fondos grises */
+
+.h3-span-alt {
+    background-color: var(--gris-claro);
+}
+
+/* h3 con guiones plomos */ 
+h3::before {
+    content: '';
+    position: absolute;
+    background-color: var(--var-dorado);
+    height: 2px;
+    inset: 0;
+    top: 50%;
+}
+
+.h3-alt::before {
+    background-color: var(--var-gris-oscuro);
+}
+
+h4, .span-h4 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+h6 {
+    color: #3F3F3F;
+    font-size: 16px;
+    font-weight: 400;
+}
+.h6-footer {
+    font-weight: 300;;
+}
+p {
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 1.55em;
+    margin-bottom: 20px;
+}
+h6, .p-footer {
+    font-weight: 400;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 1.55em;   
+}
+.fw-300 {
+    font-weight: 300;
+}
+
+a {
+    font-weight: 300;
+}
+
+a, .span-a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+.link-footer, .titulo-footer, h6 {
+    color: #3F3F3F;
+    font-weight: 500;
+    text-decoration: none;
+}
+.link-footer-contacto {
+    color: #3F3F3F;
+    font-weight: 300;
+    text-decoration: none;
+}
+.titulo-footer {
+    margin-bottom: 12px;
+}
+
+.item-footer {
+    color: black;
+}
+
+.item-footer:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.span-fechas {
+    background-color: var(--var-primary);
+    color: var(--var-blanco);
+    padding: 2px 8px;
+    border-radius: 4px; 
+    font-size: 12px;
+    font-weight: 200;
+    z-index: 3;
+    position: relative;
+}
+
+.span-fechas-crono {
+    font-size: 29px;
+    color: var(--var-txt-dorado);
+    font-weight: 300;
+    position: relative;
+    padding-left: 16px;
+}
+/* Nav Secundario */
+
+.fondoup .nav-link{
+    color: var(--var-texto);
+    font-size: 12px;
+}
+
+.nav i {
+    font-size: 18px;
+    color: var(--var-secondary-hover);
+}
+
+.nav .dropdown-toggle {
+    background: #EEEAC5;
+    border-radius: 4px;
+}
+
+/* Sección Portada */
+
+.portada source{
+    position: relative;
+	z-index: 0;
+}
+.portada {
+    position: relative;
+    max-height: 650px;
+    overflow: hidden;
+    z-index: -1;
+    margin-top: -30px;
+}
+.textodes {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.portada__p {
+    max-width: 40ch;
+    margin-inline: auto;
+    color: #fff;
+}
+
+.portada__col {
+    background: rgba(0,0,0,.5);
+    width: 700px;
+    height: 700px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+}
+.h2-portada {
+    padding-top: 150px;
+    text-shadow: 0 0 20px black;
+}
+/* Portada contactos */
+#portada {
+    background: url(../img/imagen-contacto.jpg) 50% no-repeat;
+    /* position: relative;
+	z-index: 1; */
+    background-size: cover;
+    height: 400px;
+    /* overflow: hidden; */
+}
+#portada2 {
+    background: url(../img/trenes/FCA-Evento-02.jpeg) 50% no-repeat;
+    /* position: relative;
+	z-index: 1; */
+    background-size: cover;
+    height: 400px;
+    /* overflow: hidden; */
+}
+
+/* Portada parque */
+#portada3 {
+    background: url(../img/trenes/tren.jpg) 50% no-repeat;
+    /* position: relative;
+	z-index: 1; */
+    background-size: cover;
+    height: 400px;
+    /* overflow: hidden; */
+}
+
+
+/* Sección horarios y precios */
+
+.horarios__p{
+    font-size: 16px;
+    margin-bottom: 12px;
+} 
+
+.horarios__hora {
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 16px;
+    padding: 16px 0;
+}
+
+.horarios__hora--naranja {
+    color: #DDA53D;
+    background: #FAEED5;
+}
+
+.horarios__hora--celeste {
+    background-color: #CEEFEF;
+    color: var(--var-primary);
+}
+
+.horarios__row {
+    padding: 16px;
+    margin: 0;
+    border-radius: 16px;
+}
+
+.horarios__row--naranja {
+    background-color: #FDF8ED;
+}
+
+.horarios__row--celeste {
+    background-color: #EDF9F9;
+}
+
+.horarios__col {
+    border-radius: 16px; 
+    background-color: white;
+    padding: 16px;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.1)
+}
+
+/* Modulo actividades */
+
+.modulo_entrada {
+    text-decoration: none;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.modulo_entrada:hover .span-fechas{
+    background-color: rgba(211,162,74, 1);
+}
+.modulo_entrada .h4-span {
+    font-size: 36px;
+    font-family: 'Spectral', serif;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+.modulo_entrada:hover .h4-span {
+    color: #fff;
+    
+}
+.modulo_entrada .h4-span::before  {
+    transition: all 1s ease;
+}
+
+.modulo_entrada:hover .h4-span::before {
+    background-color: rgba(99,146,156,1);
+    display: block;
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    left: -40px;
+    right: -20px;
+    content: '';
+    z-index: -1 ;
+    border-bottom-right-radius: 10px ;
+    border-top-right-radius: 10px ;
+    animation: modulo 0.3s infinite;
+    animation-iteration-count: unset;
+}
+@keyframes modulo {
+    from {right: 100%;}
+   to {right: -20px;}
+}
+.modulo_entrada:hover .mask{
+    display: block;
+    background: linear-gradient(0deg, rgba(2,0,36,.25) 0%, rgba(211,162,74,.2) 35%);
+}
+.mask {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);     
+    display: block;
+}
+.img_modulo {
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: 300px;
+}
+.modulo-grande-grid .img_modulo {
+    max-height: 623px;
+}
+
+.modulo-grande-grid2 .img_modulo {
+    max-height: 200px;
+    width: 100%;
+}
+
+.img_modulo2 {
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    max-height: 300px;
+}
+
+.span-fechas-crono::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    background-color: var(--var-dorado);
+    inset: 0;
+    top: -2px;
+}
+
+.navbar-nav li a {
+    font-weight: 300;
+    font-size: 16px;
+    color: #000 !important;
+    margin: 0 4px;
+}
+
+.navbar-nav .active {
+    color: var(--var-primary) !important;
+    border-bottom: 2px solid var(--var-primary);
+}
+
+.contenedor_texto_modulo{
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    right: 60px;
+    z-index: 2;
+}
+.p_modulo {
+    color: #fff;
+    text-decoration: underline;
+}
+.d-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto;
+}
+.modulo-grande-grid {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.bg-modulo-actividades{
+    background-color: var(--var-gris-claro);
+}
+.h3-span-act {
+    background-color: var(--var-gris-claro);
+    position: relative;
+    padding: 0 12px;
+}
+
+.h3-span-act2 {
+    background-color: white;
+    position: relative;
+    padding: 0 12px;
+}
+.h3-span-act3 {
+    background-color: var(--var-gris-claro);
+    position: relative;
+    padding: 0 12px;
+}
+
+.svg-actividades {
+    padding: 0;
+    margin: 0;
+}
+
+
+.fondoact2 {
+    background-color: var(--var-gris-claro) !important;
+    padding-bottom: 9%;
+    margin-bottom: -50px;
+} 
+
+.fondoact3{
+    background-color: var(--var-gris-claro) !important;
+    
+} 
+
+/* */
+
+.fondoact2 .modulo_entrada {
+    aspect-ratio: 1;
+    margin: 12px 0;
+}
+
+.fondoact2 .modulo_entrada .h4-span {
+    font-size: 22px
+}
+
+
+
+label {
+    font-size: 13px;
+    font-weight: 400;
+    padding: 0 8px;
+    background: #fff;
+}
+
+*::placeholder {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.form__input {
+    border-radius: 16px;
+    padding: 16px 24px;
+    border: 1px solid #d0d0d0;
+}
+
+/* Botones */
+
+.btn {
+    font-size: 15px;
+    font-weight: 300;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,.15);
+    border-radius: 16px;
+	font-family: 'Poppins', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn:hover, .btn:focus{
+    border: 2px solid #fff;
+}
+
+.btn-primary,  .btn-primary:focus {
+    background-color: var(--var-primary);
+    padding: 14px 32px;
+    color: #fff;
+    transition: 100ms ease-out transform;
+}
+
+.btn-secondary {
+    background-color: var(--var-secondary);
+    color: var(--var-secondary-txt-hover);
+    padding: 13px 6.5em;
+}
+
+.btn-primary:hover {
+    background: var(--var-primary-hover);
+    transform: translateY(-4px);
+    transition: 100ms ease-out transform;
+}
+
+.btn-secondary:hover {
+    background: var(--var-secondary-hover);
+    color: #fff;
+}
+
+.btn ion-icon{
+    font-size: 22px;
+	transition: 0.5s transform;
+	margin-right: 6px;
+}
+.btn:hover ion-icon{
+	transition: 0.3s transform;
+	transform: rotate(-90deg);
+	margin-right: 6px;
+}
+
+/* Imagenes */
+
+img {
+    border-radius: 16px;
+}
+
+.navegador {
+	float: right;		
+}
+ 
+/* Nav */
+
+.faverde {
+	color: rgb(142, 199, 56);
+	margin-right: 5px;
+}
+
+.menu-secundario__p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.fondoup {
+    background: var(--var-secondary);
+    
+}
+
+.fondoup .row {
+    display: flex;
+    align-items: center;
+}
+/* Horarios y precios */
+.svg-horarios {
+    margin-top: -60px;
+}
+/* Noticias */
+.img-noticias {
+    height: 180px;
+    object-fit: cover;
+}
+.img-nocicias, .borde-card-noticias {
+    border-radius: 20px;
+}
+.hover-card:hover {
+    transform: translateY(-4px);
+    transition: 100ms ease-out transform;
+}
+
+
+/* Parque museo */
+#patrimonio-botanico {
+    margin-top: 100px;
+}
+.imagen-interactiva {
+    background-image: url(../img/mapa-interactivo.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 600px;;
+}
+.card {
+    border: none;
+}
+
+.card-text {
+   font-size: 16px;
+}
+
+#noticias .card-body {
+    padding: 12px 0;
+} 
+.card-patrimonio, .card-patrimonio img {
+    border-radius: 15px;
+}
+/* Footer */
+.fondo-footer {
+    background-color: #f1f3d6;
+}
+.img-waves {
+    margin-bottom: -12px;
+}
+.logo-footer {
+    width: 100%;
+    height: 70px;
+}
+.fondo-footer-2 {
+    background-color: #A4A965;
+}
+.rrss a {
+    color: #C5CA91;
+    font-size: 40px;
+}
+iframe {
+    border-radius: 15px; 
+	/* background-color: var(--var-secondary);
+	background-color: rgb(239, 240, 187);
+	padding: 2px 20px; */
+}
+
+
+
+.logoo {
+	position: relative;
+}
+.logoo img{
+	position: relative;
+	z-index: 2;
+}
+
+.logoo::before {
+	height: 115px;
+	z-index: 1;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    content: '';
+    inset: 0;
+}
+
+.bg-white2 {
+	background-color: white;
+    box-shadow: 0 5px 18px rgba(0,0,0,.1);
+}
+
+/* Contacto*/
+.svg-contacto {
+    margin-top: -110px;
+}
+
+/* linea de tiempo */
+
+.linea {
+    display: block;
+    position: relative;
+}
+.linea::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 9px;
+    height: 1px;
+    width: 100%;
+    border-top: 2px dashed var(--var-dorado);
+}
+.linea-de-tiempo .rounded {
+    border-radius: 10px !important;
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+}
+.punto-linea {
+    text-indent: -9999em;
+    border: 3px solid var(--var-dorado);
+    background-color: var(--var-blanco);
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    display: block;
+    position: relative;
+}
+.owl-nav {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 186px;
+    text-align: center;
+}
+.owl-prev, .owl-next {
+    background-color: var(--var-gris-claro) !important;
+    border-radius: 15px;
+    width: 28px;
+    position: absolute;
+    margin-left: -30px;
+    left: 0;
+}
+.owl-prev:hover, .owl-next:hover {
+    background-color: var(--var-gris-oscuro) !important;
+}
+.owl-prev:hover span, .owl-next:hover span {
+    color: var(--var-blanco);
+}
+.owl-next {
+    margin-right: -30px; 
+    left: auto;
+    right: 0;
+}
+.owl-prev span, .owl-next span {
+    padding: 6px 8px;
+    display: inline-block;
+}
+@media only screen and (min-width: 1400px) {
+    .margen-contenedor-linea {
+        padding-left: calc( (100vw - 1320px) / 2 );
+    }
+    .owl-nav {
+        left: calc(calc( (100vw - 1320px) / 2 )* -1 );
+    }
+}
